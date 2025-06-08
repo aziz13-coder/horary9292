@@ -28,6 +28,24 @@ docker run -p 5000:5000 horary-app
 
 The API will be available on `http://localhost:5000`.
 
+## Local Start Scripts
+
+If you prefer to run the backend directly instead of using Docker, two helper
+scripts are provided. On Unix systems run `start.sh`:
+
+```bash
+./start.sh
+```
+
+Windows users can start the API with `start.bat`:
+
+```bat
+start.bat
+```
+
+Both scripts expect the `PORT` environment variable to be defined and will
+install Python dependencies on first run if they are not already cached.
+
 ## Windows Packaging
 
 If you want to distribute the application through the Microsoft Store you can
