@@ -45,3 +45,47 @@ wrap the backend executable and built frontend into an `.appx` package.
 
    Sign the package with your code signing certificate and submit it to the
    Microsoft Store for distribution.
+
+## Local Development on Windows
+
+Before running the application manually make sure the following software is installed:
+
+- **Python 3.10+** (available in your `PATH`)
+- **Node.js 16+** with npm
+
+The backend reads optional environment variables:
+
+- `HORARY_CONFIG` – path to a custom `horary_constants.yaml`. Defaults to the
+  file in `backend/`.
+- `HORARY_DISABLE_AUTO_LOGGING` – set to `true` to disable startup logging.
+- `HORARY_CONFIG_SKIP_VALIDATION` – set to `true` to skip validation at start.
+
+### Start the Backend
+
+From the repository root run:
+
+```bash
+cd backend
+python app.py
+```
+
+The API will be available on `http://localhost:5000`.
+
+### Start the Frontend
+
+Open a second terminal and run:
+
+```bash
+cd frontend
+npm install      # only once
+npm run dev
+```
+
+This launches the Vite development server. If you have packaged the frontend
+with Electron you can run that executable instead.
+
+### start.bat
+
+A convenient `start.bat` script is included at the project root to launch both
+services. Double-click it or run it from a command prompt to start the backend
+and frontend together.
