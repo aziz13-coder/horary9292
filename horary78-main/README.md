@@ -45,3 +45,30 @@ wrap the backend executable and built frontend into an `.appx` package.
 
    Sign the package with your code signing certificate and submit it to the
    Microsoft Store for distribution.
+
+## Electron Desktop App
+
+An Electron wrapper can be used to run the built frontend as a desktop
+application.
+
+1. Install dependencies:
+
+   ```bash
+   cd frontend && npm install
+   ```
+
+2. Start Electron in development mode which runs the Vite dev server and
+   launches Electron once the server is ready:
+
+   ```bash
+   npm run electron:dev
+   ```
+
+3. Build a distributable desktop package:
+
+   ```bash
+   npm run electron:build
+   ```
+
+The resulting binaries will be placed in `frontend/dist` and packaged by
+`electron-builder`.
