@@ -2,6 +2,14 @@
 
 This repository contains the backend and frontend for the Horary astrology application. The project structure was simplified so the backend now lives in the `backend/` directory and the frontend in `frontend/`. A `Dockerfile` is provided to build a container that bundles both parts and serves the API via Gunicorn.
 
+## Install Dependencies
+
+For local development, install the Python packages using the requirements file in the backend directory:
+
+```bash
+pip install -r backend/requirements.txt
+```
+
 ## Build the Image
 
 From the repository root run:
