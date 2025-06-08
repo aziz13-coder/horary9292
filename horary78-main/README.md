@@ -9,6 +9,8 @@ For local development, install the Python packages using the requirements file i
 ```bash
 pip install -r backend/requirements.txt
 ```
+The requirements file lists core packages like Flask and now includes
+`watchdog>=3.0.0` for file change monitoring.
 
 ## Build the Image
 
